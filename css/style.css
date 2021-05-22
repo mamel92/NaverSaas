@@ -389,4 +389,22 @@ body {
   font-size: 1rem;
 }
 
+.container {
+  width: 460px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background: yellow;
+}
+
+.header {
+  background-color: pink;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
 /*# sourceMappingURL=style.css.map */
