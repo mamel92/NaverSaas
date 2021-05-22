@@ -21,30 +21,38 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-@font-face {
-    font-family: 'Spoqa Han Sans';
-    font-weight: 700;
-    font-display: swap;
-    src: local('Spoqa Han Sans Bold'), url('../fonts/SpoqaHanSansBold.woff2') format('woff2'), url('../fonts/SpoqaHanSans/SpoqaHanSansBold.woff') format('woff'),
+ @font-face {
+  font-family: 'Spoqa Han Sans';
+  font-weight: 700;
+  font-display: swap;
+  src: local('Spoqa Han Sans Bold'),
+  url('../fonts/SpoqaHanSansBold.woff2') format('woff2'),
+  url('../fonts/SpoqaHanSans/SpoqaHanSansBold.woff') format('woff'),
 }
 
 @font-face {
-    font-family: 'Spoqa Han Sans';
-    font-weight: 400;
-    font-display: swap;
-    src: local('Spoqa Han Sans Regular'), url('../fonts/SpoqaHanSansRegular.woff2') format('woff2'), url('../fonts/SpoqaHanSansRegular.woff') format('woff'),
+  font-family: 'Spoqa Han Sans';
+  font-weight: 400;
+  font-display: swap;
+  src: local('Spoqa Han Sans Regular'),
+  url('../fonts/SpoqaHanSansRegular.woff2') format('woff2'),
+  url('../fonts/SpoqaHanSansRegular.woff') format('woff'),
 }
 
 @font-face {
-    font-family: 'Spoqa Han Sans';
-    font-weight: 300;
-    font-display: swap;
-    src: local('Spoqa Han Sans Light'), url('../fonts/SpoqaHanSansLight.woff2') format('woff2'), url('../fonts/SpoqaHanSansLight.woff') format('woff'),
+  font-family: 'Spoqa Han Sans';
+  font-weight: 300;
+  font-display: swap;
+  src: local('Spoqa Han Sans Light'),
+  url('../fonts/SpoqaHanSansLight.woff2') format('woff2'),
+  url('../fonts/SpoqaHanSansLight.woff') format('woff'),
 }
 
 @font-face {
-    font-family: 'Spoqa Han Sans';
-    font-weight: 100;
-    font-display: swap;
-    src: local('Spoqa Han Sans Thin'), url('../fonts/SpoqaHanSansThin.woff2') format('woff2'), url('../fonts/SpoqaHanSansThin.woff') format('woff'),
+  font-family: 'Spoqa Han Sans';
+  font-weight: 100;
+  font-display: swap;
+  src: local('Spoqa Han Sans Thin'),
+  url('../fonts/SpoqaHanSansThin.woff2') format('woff2'),
+  url('../fonts/SpoqaHanSansThin.woff') format('woff'),
 }
