@@ -30,3 +30,50 @@
 .main {
     flex-grow: 1;
 }
+
+//로그인 폼
+.loginForm {
+    legend {
+        @include a11y;
+    }
+}
+
+//아이디 및 비밀번호 입력 서식
+.userEmail,
+.userPassword {
+    margin-bottom: em(10px);
+}
+
+.formControl {
+    &User {
+        border: 1px solid $secondary;
+        padding: em(9px);
+        &:focus-within {
+            border-color: $primary;
+        }
+    }
+    &__input {
+        width: 100%;
+        padding: em(5px);
+        &:focus {
+            outline: 0;
+            background-color: $Alpha;
+        }
+    }
+}
+
+// .errorMessage {
+//     color: &warning;
+//     display: none;
+//     &--inValid{
+//         display: block;
+//     }
+// }
+.errorMessage {
+    color: $warning;
+    display: none;
+}
+
+.is--invalid .errorMessage {
+    display: block;
+}
