@@ -23,12 +23,24 @@
             margin-top: em(100px);
             margin-bottom: em(50px);
         }
+        a {
+            display: block;
+        }
     }
 }
 
 //메인
 .main {
     flex-grow: 1;
+}
+
+// 아웃라인 재설정
+:focus {
+    outline: 0;
+}
+
+:focus-visible {
+    @include customOutline;
 }
 
 //로그인 폼
@@ -63,6 +75,9 @@
             background-color: $Alpha;
         }
     }
+    &__input:focus-visible {
+        box-shadow: none;
+    }
 }
 
 // .errorMessage {
@@ -85,6 +100,37 @@
 .userSelectInfo {
     order: 1;
     @include flexbox;
+}
+
+//로그인 상태 유지
+.loginState {
+    //로그인 상태 유지 input
+    &__checkbox {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+    }
+    //로그인 상태유지 label
+    &__label {
+        @include flexbox(row, flex-start, center);
+        cursor: pointer;
+    }
+    &__label::before {
+        content: "";
+        display: inline-block;
+        width: em(20px);
+        height: em(20px);
+        background: url(./../images/unchecked.svg) no-repeat;
+        background-size: 100% 100%;
+        margin-right: em(8px);
+    }
+    &__checkbox:checked+&__label::before {
+        background-image: url(./../images/checked.svg);
+    }
+    &__checkbox:focus+&__label::before {
+        @include customOutline;
+    }
 }
 
 // IP 보안 링크
@@ -110,14 +156,14 @@
 //IP 보안 체크 박스
 .ipSecurity {
     //체크박스 input
-    &Checkbox {
+    &__checkbox {
         position: absolute;
         width: 1px;
         height: 1px;
         opacity: 0;
     }
     //체크박스 label
-    &Label::before {
+    &__label::before {
         display: inline-block;
         width: em(36px, 14px);
         font-size: rem(14px);
@@ -126,13 +172,12 @@
         margin-left: em(8px);
         color: $secondary;
     }
-    &Checkbox:checked+&Label::before {
+    &__checkbox:checked+&__label::before {
         content: "ON";
         color: $primary;
     }
-    &Checkbox:focus+&Label::before {
+    &__checkbox:focus+&__label::before {
         // outline: 1px Dotted $silver;
-        box-shadow: 0 0 0 2px $outline;
-        border-radius: 2px;
+        @include customOutline;
     }
 }
